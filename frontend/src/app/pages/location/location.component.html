@@ -1,0 +1,48 @@
+<header class="absolute z-20 pt-6 px-6 flex justify-between items-center w-full">
+    <div class="grow basis-0">
+        <a class="bg-gray-100 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer shadow-lg" routerLink="/">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4 text-gray-700" viewBox="0 0 512 512">
+                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"/>
+            </svg>
+        </a>
+    </div>
+    <div class="grow basis-0"></div>
+</header>
+
+<div class="px-6 py-4 overflow-x-auto flex gap-5 container absolute bottom-0 left-0 z-10">
+    <article class="min-w-[320px] w-full flex flex-col rounded-2xl overflow-hidden bg-white shadow-lg">
+        <img src="./assets/trenzas.jpg" class="h-36 object-cover" alt="">
+        <footer class="p-4 flex gap-4">
+            <aside class="grow">
+                <h1 class="font-semibold text-xl text-gray-700">"estudio44" - Estudio</h1>
+                <h2 class="pt-1 flex text-gray-500 text-sm">
+                    <span class="mr-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4 text-blue-500" viewBox="0 0 384 512">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                        </svg>
+                    </span>
+                    Villa Luzuriaga, Argentina.
+                </h2>
+                <h3 class="pt-2 font-semibold text-gray-500">5.0 <span class="ml-1 text-yellow-500">★★★★★</span> (0 Reseñas)</h3>
+            </aside>
+            <a target="_blank" href="https://www.google.com/maps/place/Peluquer%C3%ADa+Nelson/@-34.8013941,-55.9182457,20.75z/data=!4m6!3m5!1s0x959f8a3e6c726e4d:0x9ed6a5e7926fba6b!8m2!3d-34.8014248!4d-55.9182018!16s%2Fg%2F11c719_3mn?entry=ttu" class="w-12 h-12 rounded-full bg-blue-500 text-white p-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
+                    <path d="M227.7 11.7c15.6-15.6 40.9-15.6 56.6 0l216 216c15.6 15.6 15.6 40.9 0 56.6l-216 216c-15.6 15.6-40.9 15.6-56.6 0l-216-216c-15.6-15.6-15.6-40.9 0-56.6l216-216zm87.6 137c-4.6-4.6-11.5-5.9-17.4-3.5s-9.9 8.3-9.9 14.8v56H224c-35.3 0-64 28.7-64 64v48c0 13.3 10.7 24 24 24s24-10.7 24-24V280c0-8.8 7.2-16 16-16h64v56c0 6.5 3.9 12.3 9.9 14.8s12.9 1.1 17.4-3.5l80-80c6.2-6.2 6.2-16.4 0-22.6l-80-80z"/>
+                </svg>
+            </a>
+            
+        </footer>
+    </article>
+</div>
+
+
+<google-map width="100%" [height]="mapHeight" class="w-full h-full" [options]="options">
+    <map-marker [options]="markerOptions"></map-marker>
+</google-map>
+<app-navigation selected="Ubicación"></app-navigation>
+
+<style>
+    .container::-webkit-scrollbar{
+        display: none;
+    }
+</style>
