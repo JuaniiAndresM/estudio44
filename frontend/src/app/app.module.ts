@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -10,6 +12,8 @@ import { CategorieComponent } from './pages/categorie/categorie.component';
 import { LocationComponent } from './pages/location/location.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { ServiceComponent } from './pages/service/service.component';
+import { NotificationsComponent } from './components/notifications/notifications.component';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,12 +23,14 @@ import { ServiceComponent } from './pages/service/service.component';
     CategoriesComponent,
     CategorieComponent,
     LocationComponent,
-    ServiceComponent
+    ServiceComponent,
+    NotificationsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

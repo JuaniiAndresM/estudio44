@@ -1,0 +1,99 @@
+<button class="bg-gray-200 w-12 h-12 rounded-full flex justify-center items-center cursor-pointer" (click)="openNotifications()">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 text-gray-700" viewBox="0 0 448 512">
+        <path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/>
+    </svg>
+</button>
+
+<section class="z-20 fixed max-w-lg mx-auto overflow-hidden top-0 left-0 right-0 w-full h-full pb-[72px] bg-white opacity-0 pointer-events-none [&.active]:opacity-100 [&.active]:pointer-events-auto transition-all overflow-y-auto" [ngClass]="{'active' : showNotifications}">
+    <header class="pt-6 px-6 flex justify-between items-center w-full">
+        <div class="grow basis-0">
+            <button class="border w-10 h-10 rounded-full flex justify-center items-center cursor-pointer" (click)="hideNotifications()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4 text-gray-700" viewBox="0 0 512 512">
+                    <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"/>
+                </svg>
+            </button>
+        </div>
+        <h1 class="font-semibold text-gray-700">Notificaciones</h1>
+        <div class="grow basis-0"></div>
+    </header>
+
+    <div class="flex flex-col gap-5 p-6 pb-1">        
+        <h2 class="text-gray-700 text-2xl font-semibold">Hoy</h2>
+        <ul class="divide-y">
+            <li class="flex gap-4 pb-4">
+                <span class="min-w-12 w-12 h-12 rounded-full bg-blue-100 flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 text-blue-500" viewBox="0 0 448 512">
+                        <path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/>
+                    </svg>
+                </span>
+                <p class="text-sm text-gray-500 pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, fugiat.</p>
+            </li>
+            <li class="flex gap-4 py-4">
+                <span class="min-w-12 w-12 h-12 rounded-full bg-blue-100 flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 text-blue-500" viewBox="0 0 448 512">
+                        <path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/>
+                    </svg>
+                </span>
+                <p class="text-sm text-gray-500 pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, fugiat.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="flex flex-col gap-5 p-6 pb-1">        
+        <h2 class="text-gray-700 text-2xl font-semibold">Ayer</h2>
+        <ul class="divide-y">
+            <li class="flex gap-4 pb-4">
+                <span class="min-w-12 w-12 h-12 rounded-full bg-blue-100 flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 text-blue-500" viewBox="0 0 448 512">
+                        <path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/>
+                    </svg>
+                </span>
+                <p class="text-sm text-gray-500 pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, fugiat.</p>
+            </li>
+            <li class="flex gap-4 py-4">
+                <span class="min-w-12 w-12 h-12 rounded-full bg-blue-100 flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 text-blue-500" viewBox="0 0 448 512">
+                        <path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/>
+                    </svg>
+                </span>
+                <p class="text-sm text-gray-500 pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, fugiat.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="flex flex-col gap-5 p-6 pb-1">        
+        <h2 class="text-gray-700 text-2xl font-semibold">17 Agosto 2023</h2>
+        <ul class="divide-y">
+            <li class="flex gap-4 pb-4">
+                <span class="min-w-12 w-12 h-12 rounded-full bg-blue-100 flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 text-blue-500" viewBox="0 0 448 512">
+                        <path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/>
+                    </svg>
+                </span>
+                <p class="text-sm text-gray-500 pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, fugiat.</p>
+            </li>
+            <li class="flex gap-4 py-4">
+                <span class="min-w-12 w-12 h-12 rounded-full bg-blue-100 flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 text-blue-500" viewBox="0 0 448 512">
+                        <path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/>
+                    </svg>
+                </span>
+                <p class="text-sm text-gray-500 pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, fugiat.</p>
+            </li>
+            <li class="flex gap-4 py-4">
+                <span class="min-w-12 w-12 h-12 rounded-full bg-blue-100 flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 text-blue-500" viewBox="0 0 448 512">
+                        <path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/>
+                    </svg>
+                </span>
+                <p class="text-sm text-gray-500 pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, fugiat.</p>
+            </li>
+            <li class="flex gap-4 py-4">
+                <span class="min-w-12 w-12 h-12 rounded-full bg-blue-100 flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 text-blue-500" viewBox="0 0 448 512">
+                        <path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/>
+                    </svg>
+                </span>
+                <p class="text-sm text-gray-500 pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, fugiat.</p>
+            </li>
+        </ul>
+    </div>
+</section>

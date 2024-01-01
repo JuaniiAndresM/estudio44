@@ -1,44 +1,34 @@
-<header class="absolute z-20 pt-6 px-6 flex justify-between items-center w-full">
+<header class="pt-6 px-6 flex justify-between items-center w-full">
     <div class="grow basis-0">
-        <a class="bg-gray-100 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer" routerLink="/">
+        <a class="border w-10 h-10 rounded-full flex justify-center items-center cursor-pointer" routerLink="/categoria/pestañas">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4 text-gray-700" viewBox="0 0 512 512">
                 <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"/>
             </svg>
         </a>
     </div>
-    <div class="grow basis-0 flex justify-end">
-        <a class="bg-gray-100 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4 text-gray-700" viewBox="0 0 448 512">
-                <path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z"/>
-            </svg>
-        </a>
-    </div>
+    <h1 class="font-semibold text-gray-700">Agendar Turno</h1>
+    <div class="grow basis-0"></div>
 </header>
 
-<section>
-    <div class="w-full h-[220px] overflow-hidden bg-gray-100">
-        <img class="w-full h-full object-cover" loading="lazy" src="./assets/trenzas.jpg" alt="">
-    </div>
-</section>
-
-<section class="bg-white rounded-3xl w-full pt-6 relative mt-[-30px]">
-    <header class="px-6">
-        <h1 class="mt-4 font-semibold text-2xl text-gray-700">Lifting + Perfilado</h1>
-        <h2 class="text-sm text-gray-500 pt-2">Lorem ipsum dolor sit amet consectetur.</h2>
-        <hr class="my-4">
-    </header>
-
-    <div class="px-6 w-full">
+<section class="bg-white w-full pt-2">
+    <div class="px-6 w-full pt-6">
         <div class="flex justify-between items-center pb-5">
-            <h3 class="text-blue-500 text-xl font-semibold">{{selectedMonth + ' ' + year}}</h3>
+            <button class="text-blue-500 text-lg flex items-center font-semibold">{{selectedMonth + ' ' + year}} 
+                <span class="ml-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4" viewBox="0 0 512 512">
+                        <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                    </svg>
+                </span>
+            </button>
+
             <div class="flex gap-5">
-                <button class="w-10 h-10 flex justify-center items-center rounded-full text-blue-500" (click)="previousMonth()">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 320 512">
+                <button class="w-8 h-8 flex justify-center items-center rounded-full text-blue-500" (click)="previousMonth()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4" viewBox="0 0 320 512">
                         <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
                     </svg>
                 </button>
-                <button class="w-10 h-10 flex justify-center items-center rounded-full text-blue-500" (click)="nextMonth()">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 rotate-180" viewBox="0 0 320 512">
+                <button class="w-8 h-8 flex justify-center items-center rounded-full text-blue-500" (click)="nextMonth()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4 rotate-180" viewBox="0 0 320 512">
                         <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
                     </svg>
                 </button>
@@ -46,6 +36,117 @@
         </div>
         <div class="w-full h-full grid grid-cols-7 grid-rows-7 text-center aspect-square items-center gap-4" id="calendar"></div>
     </div>
+
+    <div class="pt-6">
+        <header class="px-6">
+            <h2 class="text-xl font-semibold text-gray-700">Turnos Disponibles</h2>
+        </header>
+        <div class="px-6 py-4 overflow-x-auto flex flex-wrap gap-2" id="availableHours"></div>
+    </div>
+
+    <div class="pt-6">
+        <header class="px-6">
+            <h2 class="text-xl font-semibold text-gray-700">Especialistas</h2>
+        </header>
+        <div class="px-6 py-4 overflow-x-auto flex gap-2 container">
+            
+                <button class="min-w-[30%] flex flex-col gap-2 text-left">
+                    <div class="w-full rounded-xl overflow-hidden aspect-square relative bg-gray-100">
+                        <div class="absolute top-2 right-2 rounded-full w-5 h-5 overflow-hidden">
+                            <input type="radio" name="specialist" id="" class=" w-5 h-5 rounded-full" checked>
+                        </div>
+                        <img class="w-full h-full object-cover" loading="lazy" src="./assets/trenzas.jpg" alt="">
+                    </div>
+                    <footer>
+                        <h3 class="text-gray-700 font-semibold text-sm">Nahiara Nievas</h3>
+                        <!-- <p class="text-sm text-gray-500">Lashlifting</p> -->
+                    </footer>
+                </button>
+        
+        
+                <button class="min-w-[30%] flex flex-col gap-2 text-left">
+                    <div class="w-full rounded-xl overflow-hidden aspect-square relative bg-gray-100">
+                        <div class="absolute top-2 right-2 rounded-full w-5 h-5 overflow-hidden">
+                            <input type="radio" name="specialist" id="" class=" w-5 h-5 rounded-full">
+                        </div>
+                        <img class="w-full h-full object-cover" loading="lazy" src="./assets/lifting.jpg" alt="">
+                    </div>
+                    <footer>
+                        <h3 class="text-gray-700 font-semibold text-sm">Juan Morena</h3>
+                        <!-- <p class="text-sm text-gray-500">Novio de la Monona</p> -->
+                    </footer>
+                </button>        
+        
+        
+                <button class="min-w-[30%] flex flex-col gap-2 text-left">
+                    <div class="w-full rounded-xl overflow-hidden aspect-square relative bg-gray-100">
+                        <div class="absolute top-2 right-2 rounded-full w-5 h-5 overflow-hidden">
+                            <input type="radio" name="specialist" id="" class=" w-5 h-5 rounded-full">
+                        </div>
+                        <img class="w-full h-full object-cover" loading="lazy" src="./assets/lifting.jpg" alt="">
+                    </div>
+                    <footer>
+                        <h3 class="text-gray-700 font-semibold text-sm">Juan Morena</h3>
+                        <!-- <p class="text-sm text-gray-500">Novio de la Monona</p> -->
+                    </footer>
+                </button>        
+        </div>
+    </div>
 </section>
 
-<app-navigation></app-navigation>
+
+<section class="fixed max-w-lg mx-auto overflow-hidden top-0 left-0 right-0 w-full h-full pb-[72px] bg-white opacity-0 pointer-events-none [&.active]:opacity-100 [&.active]:pointer-events-auto transition-all" [ngClass]="{'active' : showSummary}">
+    <header class="pt-6 px-6 flex justify-between items-center w-full">
+        <div class="grow basis-0">
+            <button class="border w-10 h-10 rounded-full flex justify-center items-center cursor-pointer" (click)="hideSummary()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4 text-gray-700" viewBox="0 0 512 512">
+                    <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"/>
+                </svg>
+            </button>
+        </div>
+        <h1 class="font-semibold text-gray-700">Resumen</h1>
+        <div class="grow basis-0"></div>
+    </header>
+
+    <div class="p-6 flex flex-col gap-6">
+        <ul class="w-full border rounded-xl p-5 flex flex-col gap-2">
+            <li class="flex justify-between text-gray-600 font-semibold text-sm"><span class="text-gray-400">Salón</span> estudio44</li>
+            <li class="flex justify-between text-gray-600 font-semibold text-sm"><span class="text-gray-400">Ubicación</span> Villa Luzuriaga, Argentina</li>
+            <li class="flex justify-between text-gray-600 font-semibold text-sm"><span class="text-gray-400">Telefono</span> <a href="tel:+59898234717">+59898234717</a></li>
+            <li class="flex justify-between text-gray-600 font-semibold text-sm"><span class="text-gray-400">Fecha</span> Enero 11, 2024</li>
+            <li class="flex justify-between text-gray-600 font-semibold text-sm"><span class="text-gray-400">Hora</span> 14:30</li>
+            <li class="flex justify-between text-gray-600 font-semibold text-sm"><span class="text-gray-400">Especialista</span> Nahiara Nievas</li>
+        </ul>
+
+        <ul class="w-full border rounded-xl p-5 flex flex-col gap-2">
+            <li class="flex justify-between text-gray-600 font-semibold text-sm"><span class="text-gray-400">Lifting + Perfilado</span> $4.200</li>
+            <hr class="my-2">
+            <li class="flex justify-between text-gray-600 font-semibold text-sm"><span class="text-gray-400">Total</span> $4.200</li>
+        </ul>
+
+        <ul class="w-full border rounded-xl p-5 flex flex-col gap-2">
+            <li class="flex justify-between text-gray-600 font-semibold text-sm">
+                <span class="text-gray-400 flex gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="text-blue-500 w-5 h-5" viewBox="0 0 640 512">
+                        <path d="M96 96V320c0 35.3 28.7 64 64 64H576c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160c-35.3 0-64 28.7-64 64zm64 160c35.3 0 64 28.7 64 64H160V256zM224 96c0 35.3-28.7 64-64 64V96h64zM576 256v64H512c0-35.3 28.7-64 64-64zM512 96h64v64c-35.3 0-64-28.7-64-64zM288 208a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120V360c0 66.3 53.7 120 120 120H520c13.3 0 24-10.7 24-24s-10.7-24-24-24H120c-39.8 0-72-32.2-72-72V120z"/>
+                    </svg>
+                    Efectivo
+                </span> 
+                
+                <button class="text-blue-500">Cambiar</button>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<div class="max-w-lg mx-auto overflow-hidden fixed bg-white bottom-0 left-0 right-0 w-full z-10 p-3 px-5" (click)="scheduleAppointment()">
+    <button class="w-full text-center py-3 bg-blue-500 rounded-3xl text-white">Agendar Turno</button>
+</div>
+
+
+<style>
+    .container::-webkit-scrollbar{
+        display: none;
+    }
+</style>
